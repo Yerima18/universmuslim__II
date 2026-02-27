@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4F6F52;
+  --color-primary-dark: #3A4D39;
+  --color-accent: #D2B48C;
+  --color-bg: #fdfbf7;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-bg);
+    font-family: var(--font-sans);
+  }
+}
