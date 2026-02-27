@@ -1,60 +1,152 @@
-# Univers Muslim - Boutique de Cadeaux Islamiques
+# Univers Muslim
 
-Une plateforme e-commerce moderne pour Univers Muslim, spécialisée dans les cadeaux islamiques, l'éducation et les rappels.
+> Boutique islamique en ligne — Cadeaux, Éducation & Rappels
+> Basée à Cotonou, Bénin 🇧🇯
+
+---
+
+## Aperçu
+
+**Univers Muslim** est une boutique e-commerce moderne spécialisée dans les cadeaux islamiques, les livres éducatifs et les rappels spirituels. Les commandes se font directement via WhatsApp avec un message pré-rempli automatiquement.
+
+---
+
+## Stack technique
+
+| Catégorie | Technologie |
+|-----------|-------------|
+| Framework | Next.js 16 (App Router) |
+| UI | React 19 + Tailwind CSS 4 |
+| Animations | Motion 12 |
+| Fonts | Playfair Display + Inter (Google Fonts) |
+| Icônes | Lucide React |
+| Backend | Express.js + custom server |
+| Langage | TypeScript |
+
+---
 
 ## Fonctionnalités
-- **Catalogue complet** : Présentation élégante des produits avec images et prix en FCFA.
-- **Panier persistant** : Utilisation du localStorage pour conserver les articles.
-- **Commande WhatsApp** : Flux fluide générant un message pré-rempli avec les détails de la commande.
-- **Générateur d'images IA** : Création de visuels uniques via Gemini 3 Pro.
-- **SEO Optimisé** : Métadonnées, sitemap et robots.txt inclus.
-- **Design Premium** : Style minimaliste inspiré de Notion avec des touches islamiques modernes.
 
-## Installation et Lancement
+- **Catalogue produits** — 8 produits répartis en 4 catégories : Rappels, Cartes, Coffrets, Enfants
+- **Filtrage & tri** — par catégorie, public (Enfants/Adultes) et prix
+- **Panier persistant** — sauvegardé dans le `localStorage`
+- **Commande WhatsApp** — message pré-rempli avec les détails de la commande et les infos de livraison
+- **Animations fluides** — fade-up au scroll, stagger, `AnimatePresence` sur les filtres et le panier
+- **Navbar active** — lien de la page courante mis en évidence
+- **Bouton WhatsApp flottant** — visible sur toutes les pages
+- **SEO** — sitemap dynamique, robots.txt, métadonnées Next.js
+- **Responsive** — mobile-first, optimisé pour tous les écrans
 
-1. **Installer les dépendances** :
-   ```bash
-   npm install
-   ```
+---
 
-2. **Lancer en mode développement** :
-   ```bash
-   npm run dev
-   ```
+## Installation
 
-3. **Build pour la production** :
-   ```bash
-   npm run build
-   ```
+```bash
+# 1. Installer les dépendances
+npm install
 
-4. **Lancer en production** :
-   ```bash
-   npm start
-   ```
+# 2. Copier le fichier d'environnement
+cp .env.example .env
+
+# 3. Lancer en développement
+npm run dev
+```
+
+L'application est accessible sur **http://localhost:3000**.
+
+---
+
+## Scripts
+
+| Commande | Description |
+|----------|-------------|
+| `npm run dev` | Démarre le serveur de développement |
+| `npm run build` | Build de production |
+| `npm start` | Lance le serveur de production |
+| `npm run lint` | Vérifie les types TypeScript |
+| `npm run clean` | Supprime le cache `.next` |
+
+---
 
 ## Configuration
 
-### Changer le numéro WhatsApp
-Modifiez le fichier `/config/site.ts` :
+### Numéro WhatsApp
+Modifiez `/config/site.ts` :
+
 ```typescript
 export const siteConfig = {
-  whatsappNumber: "229XXXXXXXX", // Format international sans le '+'
-  whatsappNumberDisplay: "+229 XX XX XX XX", // Format d'affichage
+  whatsappNumber: "229XXXXXXXX",          // Format international sans '+'
+  whatsappNumberDisplay: "+229 XX XX XX XX",
 };
 ```
 
-### Remplacer les images des produits
-Les images actuelles utilisent des placeholders via `picsum.photos`. Pour utiliser vos propres images :
-1. Placez vos fichiers dans `/public/products/`.
-2. Mettez à jour les chemins dans `/data/products.ts` (ex: `images: ['/products/mon-image.jpg']`).
-3. Dans les composants (`page.tsx`, `boutique/page.tsx`, etc.), remplacez l'URL `picsum.photos` par le chemin de l'image du produit.
+### Ajouter ou modifier des produits
+Éditez `/data/products.ts` :
 
-## Structure du Projet
-- `/app` : Routes et pages Next.js (App Router).
-- `/components` : Composants UI réutilisables et Context Providers.
-- `/data` : Données des produits et types TypeScript.
-- `/config` : Configuration globale du site.
-- `/public` : Assets statiques (images, robots.txt).
+```typescript
+{
+  id: "9",
+  slug: "nom-du-produit",
+  name: "Nom du produit",
+  priceFCFA: 5000,
+  category: "Rappels", // Rappels | Cartes | Coffrets | Enfants
+  audience: "Tous",    // Tous | Enfants | Adultes
+  description: "Description du produit...",
+  images: ["/products/mon-image.jpg"],
+}
+```
+
+### Remplacer les images placeholder
+Les images utilisent actuellement `picsum.photos`. Pour utiliser vos propres images :
+
+1. Placez vos fichiers dans `/public/products/`
+2. Mettez à jour le champ `images` dans `/data/products.ts`
+3. Remplacez les URLs `picsum.photos` dans les composants par `{product.images[0]}`
+
+---
+
+## Structure du projet
+
+```
+univers-muslim/
+├── app/
+│   ├── page.tsx              # Page d'accueil
+│   ├── boutique/             # Catalogue avec filtres
+│   ├── produit/[slug]/       # Page produit dynamique
+│   ├── panier/               # Panier & commande
+│   ├── a-propos/             # Histoire & valeurs
+│   ├── contact/              # Contact & FAQ
+│   ├── globals.css           # Thème Tailwind (couleurs, fonts)
+│   ├── layout.tsx            # Layout global
+│   └── sitemap.ts            # Sitemap dynamique
+├── components/
+│   ├── Navbar.tsx            # Navigation avec lien actif
+│   ├── Footer.tsx            # Pied de page
+│   ├── CartProvider.tsx      # Context panier (localStorage)
+│   └── FloatingWhatsApp.tsx  # Bouton WhatsApp fixe
+├── config/
+│   └── site.ts               # Config globale (WhatsApp, nom)
+├── data/
+│   └── products.ts           # Catalogue produits + types
+└── public/
+    └── logo.png              # Logo Univers Muslim
+```
+
+---
 
 ## Déploiement
-L'application est prête à être déployée sur n'importe quelle plateforme supportant Next.js (Vercel, Cloud Run, etc.). Assurez-vous de configurer la variable d'environnement `NEXT_PUBLIC_GEMINI_API_KEY` pour le générateur d'images.
+
+Le projet est prêt pour être déployé sur **Vercel** (recommandé pour Next.js) :
+
+```bash
+npm run build
+npm start
+```
+
+Pour Vercel, connectez simplement le dépôt GitHub et définissez les variables d'environnement depuis `.env.example`.
+
+---
+
+## Licence
+
+© 2025 Univers Muslim — Tous droits réservés.
