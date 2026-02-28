@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, Suspense } from 'react';
 import Link from 'next/link';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 import { products } from '@/data/products';
@@ -8,7 +8,7 @@ import { useCart } from '@/components/CartProvider';
 import { motion, AnimatePresence } from 'motion/react';
 import { useSearchParams } from 'next/navigation';
 
-export default function Shop() {
+function ShopContent() {
   const { addItem } = useCart();
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') ?? 'Toutes';
@@ -286,5 +286,13 @@ export default function Shop() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Shop() {
+  return (
+    <Suspense fallback={<div className="max-w-7xl mx-auto px-4 py-24 text-center text-slate-400">Chargement...</div>}>
+      <ShopContent />
+    </Suspense>
   );
 }
