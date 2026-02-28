@@ -5,6 +5,8 @@
   --color-primary-dark: #3A4D39;
   --color-accent: #D2B48C;
   --color-bg: #fdfbf7;
+  --color-hero: #3B1F0E;
+  --color-hero-dark: #2A1508;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;

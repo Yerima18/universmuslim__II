@@ -1,7 +1,7 @@
 # Univers Muslim
 
 > Boutique islamique en ligne — Cadeaux, Éducation & Rappels
-> Basée à Cotonou, Bénin 🇧🇯
+> Basée à Porto-Novo, Bénin 🇧🇯
 
 ---
 

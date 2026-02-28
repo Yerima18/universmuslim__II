@@ -53,7 +53,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-4">
               <li className="text-base text-slate-500">WhatsApp: {siteConfig.whatsappNumberDisplay}</li>
               <li className="text-base text-slate-500">Email: contact@universmuslim.com</li>
-              <li className="text-base text-slate-500">Cotonou, Bénin</li>
+              <li className="text-base text-slate-500">Porto-Novo, Bénin</li>
             </ul>
           </div>
         </div>

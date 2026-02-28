@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "Quels sont les moyens de paiement ?",
-    answer: "Pour le moment, nous acceptons les paiements via Mobile Money (Moov Money, MTN Mobile Money) ou en espèces à la livraison (uniquement à Cotonou)."
+    answer: "Pour le moment, nous acceptons les paiements via Mobile Money (Moov Money, MTN Mobile Money) ou en espèces à la livraison (uniquement à Porto-Novo)."
   },
   {
     question: "Proposez-vous des coffrets personnalisés ?",
@@ -36,7 +36,7 @@ const contactItems = [
     clickable: true,
   },
   { icon: <Mail className="h-6 w-6" />, iconBg: 'bg-primary/10 text-primary', label: 'Email', value: 'contact@universmuslim.com' },
-  { icon: <MapPin className="h-6 w-6" />, iconBg: 'bg-primary/10 text-primary', label: 'Localisation', value: 'Cotonou, Bénin' },
+  { icon: <MapPin className="h-6 w-6" />, iconBg: 'bg-primary/10 text-primary', label: 'Localisation', value: 'Porto-Novo, Bénin' },
   { icon: <Clock className="h-6 w-6" />, iconBg: 'bg-primary/10 text-primary', label: 'Horaires', value: 'Lun - Sam: 09h - 19h' },
 ];
 

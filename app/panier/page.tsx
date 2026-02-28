@@ -156,7 +156,7 @@ export default function CartPage() {
                   type="text" 
                   value={customerInfo.city}
                   onChange={(e) => setCustomerInfo({...customerInfo, city: e.target.value})}
-                  placeholder="Ex: Cotonou, Fidjrossè"
+                  placeholder="Ex: Porto-Novo, Ouando"
                   className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                 />
               </div>

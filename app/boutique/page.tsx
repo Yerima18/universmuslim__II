@@ -6,11 +6,15 @@ import { Search, SlidersHorizontal, X } from 'lucide-react';
 import { products } from '@/data/products';
 import { useCart } from '@/components/CartProvider';
 import { motion, AnimatePresence } from 'motion/react';
+import { useSearchParams } from 'next/navigation';
 
 export default function Shop() {
   const { addItem } = useCart();
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get('category') ?? 'Toutes';
+
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('Toutes');
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedAudience, setSelectedAudience] = useState('Tous');
   const [sortBy, setSortBy] = useState('nouveautes');
   const [filtersOpen, setFiltersOpen] = useState(false);
