@@ -89,5 +89,25 @@ export const products: Product[] = [
     audience: 'Enfants',
     description: "Le pack complet des tomes 1 et 2 pour des heures d'apprentissage ludique.",
     images: ['/products/coloriage-pack-1.jpg']
+  },
+  {
+    id: '9',
+    slug: 'fiche-le-dhikr',
+    name: "FICHE LE DHIKR — UNE LUMIÈRE POUR LE CŒUR",
+    priceFCFA: 0,
+    category: "Papeterie & Dou'as",
+    audience: 'Tous',
+    description: "Une belle fiche islamique sur le Dhikr, disponible en version bleue et rose. Idéale pour se rappeler de l'importance du rappel d'Allah au quotidien.",
+    images: ['/products/dhikr-finger-counter.jpg']
+  },
+  {
+    id: '10',
+    slug: 'finger-counter-dhikr',
+    name: "FINGER COUNTER — COMPTEUR DE DHIKR",
+    priceFCFA: 0,
+    category: "Papeterie & Dou'as",
+    audience: 'Tous',
+    description: "Compteur de dhikr à porter au doigt, disponible en vert et rose. Pratique pour effectuer vos invocations et tasbih n'importe où.",
+    images: ['/products/dhikr-finger-counter.jpg']
   }
 ];

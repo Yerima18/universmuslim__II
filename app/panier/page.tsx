@@ -76,10 +76,10 @@ export default function CartPage() {
                 >
                   <div className="h-24 w-24 flex-shrink-0 rounded-lg overflow-hidden bg-slate-100 border border-slate-200 mb-4 sm:mb-0">
                     <img 
-                      src={`https://picsum.photos/seed/${item.slug}/200/200`} 
+                      src={item.images[0]}
+                      onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${item.slug}/200/200`; }}
                       alt={item.name}
                       className="h-full w-full object-cover"
-                      referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="sm:ml-6 flex-grow">

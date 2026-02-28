@@ -251,10 +251,10 @@ export default function Home() {
                 <Link href={`/produit/${product.slug}`} className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
                     <img
-                      src={`https://picsum.photos/seed/${product.slug}/400/533`}
+                      src={product.images[0]}
+                      onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${product.slug}/400/533`; }}
                       alt={product.name}
                       className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-full text-white/90" style={{ backgroundColor: 'rgba(79,111,82,0.85)' }}>

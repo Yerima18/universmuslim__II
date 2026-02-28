@@ -242,10 +242,10 @@ function ShopContent() {
                     >
                       <Link href={`/produit/${product.slug}`} className="relative aspect-square bg-slate-100 overflow-hidden block">
                         <img
-                          src={`https://picsum.photos/seed/${product.slug}/400/400`}
+                          src={product.images[0]}
+                          onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${product.slug}/400/400`; }}
                           alt={product.name}
                           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                          referrerPolicy="no-referrer"
                         />
                         {product.audience !== 'Tous' && (
                           <span className={`absolute top-3 left-3 px-2 py-0.5 rounded-full text-xs font-bold ${

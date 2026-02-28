@@ -49,10 +49,10 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             <AnimatePresence mode="wait">
               <motion.img
                 key={selectedImageIdx}
-                src={`https://picsum.photos/seed/${product.slug}-${selectedImageIdx}/800/800`}
+                src={product.images[selectedImageIdx]}
+                onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${product.slug}/800/800`; }}
                 alt={product.name}
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
                 initial={{ opacity: 0, scale: 1.04 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
@@ -73,10 +73,10 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   }`}
                 >
                   <img
-                    src={`https://picsum.photos/seed/${product.slug}-${idx}/200/200`}
+                    src={product.images[idx]}
+                    onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${product.slug}-${idx}/200/200`; }}
                     alt={`${product.name} ${idx + 1}`}
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
                   />
                 </button>
               ))}
@@ -172,11 +172,11 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               >
               <Link href={`/produit/${p.slug}`} className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all">
                 <div className="relative aspect-square bg-slate-100 overflow-hidden">
-                  <img 
-                    src={`https://picsum.photos/seed/${p.slug}/400/400`} 
+                  <img
+                    src={p.images[0]}
+                    onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${p.slug}/400/400`; }}
                     alt={p.name}
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-grow">
