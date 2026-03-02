@@ -177,7 +177,7 @@ export default function Home() {
           >
             {[
               { value: '8+', label: 'Produits' },
-              { value: '4', label: 'Catégories' },
+              { value: '3', label: 'Catégories' },
               { value: '100%', label: 'Qualité garantie' },
             ].map((s, i) => (
               <motion.div
@@ -292,7 +292,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-60px' }}
@@ -302,7 +302,6 @@ export default function Home() {
               { name: 'Apaisement & Versets', seed: 'apaisement' },
               { name: 'Défis & Spiritualité', seed: 'defis' },
               { name: 'Coin des Enfants', seed: 'enfants' },
-              { name: "Papeterie & Dou'as", seed: 'papeterie' },
             ].map((cat, i) => (
               <motion.div
                 key={cat.name}

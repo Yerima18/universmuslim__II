@@ -3,7 +3,7 @@ export type Product = {
   slug: string;
   name: string;
   priceFCFA: number;
-  category: 'Apaisement & Versets' | 'Défis & Spiritualité' | 'Coin des Enfants' | "Papeterie & Dou'as";
+  category: 'Apaisement & Versets' | 'Défis & Spiritualité' | 'Coin des Enfants';
   audience: 'Enfants' | 'Adultes' | 'Tous';
   description: string;
   images: string[];
@@ -18,7 +18,15 @@ export const products: Product[] = [
     category: 'Apaisement & Versets',
     audience: 'Tous',
     description: "Un magnifique bocal contenant des versets du Coran pour apaiser le cœur et se rappeler d'Allah au quotidien.",
-    images: ['/products/bocal-1.jpg']
+    images: [
+      '/products/bocal-1.jpg',
+      '/products/bocal-2.jpg',
+      '/products/bocal-3.jpg',
+      '/products/bocal-4.jpg',
+      '/products/bocal-5.jpg',
+      '/products/bocal-6.jpg',
+      '/products/bocal-7.jpg',
+    ]
   },
   {
     id: '2',
@@ -28,7 +36,13 @@ export const products: Product[] = [
     category: 'Défis & Spiritualité',
     audience: 'Tous',
     description: "Relevez un défi spirituel chaque jour pendant 30 jours. Inclus un tasbih pour vos invocations.",
-    images: ['/products/defis-1.jpg']
+    images: [
+      '/products/defis-1.jpg',
+      '/products/defis-2.jpg',
+      '/products/defis-3.jpg',
+      '/products/defis-4.jpg',
+      '/products/defis-5.jpg',
+    ]
   },
   {
     id: '3',
@@ -38,7 +52,11 @@ export const products: Product[] = [
     category: 'Défis & Spiritualité',
     audience: 'Tous',
     description: "Apprenez et méditez sur les 99 Noms d'Allah avec ce coffret premium. Idéal pour offrir.",
-    images: ['/products/99noms-1.jpg']
+    images: [
+      '/products/99noms-1.jpg',
+      '/products/99noms-2.jpg',
+      '/products/99noms-3.jpg',
+    ]
   },
   {
     id: '4',
@@ -48,17 +66,28 @@ export const products: Product[] = [
     category: 'Coin des Enfants',
     audience: 'Enfants',
     description: "Des cartes colorées et ludiques pour apprendre les invocations quotidiennes aux enfants.",
-    images: ['/products/cartes-enfants-1.jpg']
+    images: [
+      '/products/cartes-enfants-1.jpg',
+      '/products/cartes-enfants-2.jpg',
+      '/products/cartes-enfants-3.jpg',
+      '/products/cartes-enfants-4.jpg',
+      '/products/cartes-enfants-5.jpg',
+    ]
   },
   {
     id: '5',
     slug: 'cartes-invocations-adultes',
     name: "CARTES D'INVOCATIONS POUR ADULTES",
     priceFCFA: 4500,
-    category: "Papeterie & Dou'as",
+    category: "Défis & Spiritualité",
     audience: 'Adultes',
     description: "Un set de cartes élégantes regroupant les invocations essentielles du musulman.",
-    images: ['/products/cartes-adultes-1.jpg']
+    images: [
+      '/products/cartes-adultes-1.jpg',
+      '/products/cartes-adultes-2.jpg',
+      '/products/cartes-adultes-3.jpg',
+      '/products/cartes-adultes-4.jpg',
+    ]
   },
   {
     id: '6',
@@ -68,7 +97,20 @@ export const products: Product[] = [
     category: 'Coin des Enfants',
     audience: 'Enfants',
     description: "Découvrez l'histoire des Prophètes à travers des dessins adaptés aux enfants. Tome 1.",
-    images: ['/products/coloriage-1.jpg']
+    images: [
+      '/products/coloriage-1-cover.jpg',
+      '/products/coloriage-1b.jpg',
+      '/products/coloriage-1d.jpg',
+      '/products/coloriage-1e.jpg',
+      '/products/coloriage-1f.jpg',
+      '/products/coloriage-1g.jpg',
+      '/products/coloriage-1i.jpg',
+      '/products/coloriage-1c.jpg',
+      '/products/coloriage-1h.jpg',
+      '/products/coloriage-1.jpg',
+      '/products/coloriage-1j.jpg',
+      '/products/coloriage-1k.jpg',
+    ]
   },
   {
     id: '7',
@@ -78,7 +120,23 @@ export const products: Product[] = [
     category: 'Coin des Enfants',
     audience: 'Enfants',
     description: "La suite des histoires des Prophètes en coloriage. Tome 2.",
-    images: ['/products/coloriage-2.jpg']
+    images: [
+      '/products/coloriage-2-cover.jpg',
+      '/products/coloriage-2b.jpg',
+      '/products/coloriage-2c.jpg',
+      '/products/coloriage-2d.jpg',
+      '/products/coloriage-2e.jpg',
+      '/products/coloriage-2f.jpg',
+      '/products/coloriage-2g.jpg',
+      '/products/coloriage-2h.jpg',
+      '/products/coloriage-2i.jpg',
+      '/products/coloriage-2j.jpg',
+      '/products/coloriage-2k.jpg',
+      '/products/coloriage-2l.jpg',
+      '/products/coloriage-2m.jpg',
+      '/products/coloriage-2n.jpg',
+      '/products/coloriage-2o.jpg',
+    ]
   },
   {
     id: '8',
@@ -88,26 +146,10 @@ export const products: Product[] = [
     category: 'Coin des Enfants',
     audience: 'Enfants',
     description: "Le pack complet des tomes 1 et 2 pour des heures d'apprentissage ludique.",
-    images: ['/products/coloriage-pack-1.jpg']
+    images: [
+      '/products/coloriage-pack-1.jpg',
+      '/products/coloriage-pack-2.jpg',
+      '/products/coloriage-pack-3.jpg',
+    ]
   },
-  {
-    id: '9',
-    slug: 'fiche-le-dhikr',
-    name: "FICHE LE DHIKR — UNE LUMIÈRE POUR LE CŒUR",
-    priceFCFA: 0,
-    category: "Papeterie & Dou'as",
-    audience: 'Tous',
-    description: "Une belle fiche islamique sur le Dhikr, disponible en version bleue et rose. Idéale pour se rappeler de l'importance du rappel d'Allah au quotidien.",
-    images: ['/products/dhikr-finger-counter.jpg']
-  },
-  {
-    id: '10',
-    slug: 'finger-counter-dhikr',
-    name: "FINGER COUNTER — COMPTEUR DE DHIKR",
-    priceFCFA: 0,
-    category: "Papeterie & Dou'as",
-    audience: 'Tous',
-    description: "Compteur de dhikr à porter au doigt, disponible en vert et rose. Pratique pour effectuer vos invocations et tasbih n'importe où.",
-    images: ['/products/dhikr-finger-counter.jpg']
-  }
 ];

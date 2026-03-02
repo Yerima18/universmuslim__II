@@ -3,7 +3,7 @@
 import { useState, use } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Minus, Plus, ShoppingCart, MessageCircle } from 'lucide-react';
+import { Minus, Plus, ShoppingCart, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { products } from '@/data/products';
 import { useCart } from '@/components/CartProvider';
 import { siteConfig } from '@/config/site';
@@ -45,7 +45,8 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="aspect-square bg-slate-100 rounded-2xl overflow-hidden border border-slate-200">
+          {/* Main image with arrows */}
+          <div className="relative aspect-square bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 group">
             <AnimatePresence mode="wait">
               <motion.img
                 key={selectedImageIdx}
@@ -53,35 +54,47 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${product.slug}/800/800`; }}
                 alt={product.name}
                 className="w-full h-full object-cover"
-                initial={{ opacity: 0, scale: 1.04 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.97 }}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               />
             </AnimatePresence>
-          </div>
-          {product.images.length > 1 && (
-            <div className="grid grid-cols-4 gap-4">
-              {product.images.map((img, idx) => (
+
+            {/* Arrows — only shown if multiple images */}
+            {product.images.length > 1 && (
+              <>
                 <button
-                  key={idx}
-                  onClick={() => setSelectedImageIdx(idx)}
-                  className={`aspect-square bg-slate-100 rounded-lg overflow-hidden border-2 transition-all cursor-pointer ${
-                    selectedImageIdx === idx
-                      ? 'border-primary ring-2 ring-primary/20'
-                      : 'border-slate-200 hover:border-primary/50'
-                  }`}
+                  onClick={() => setSelectedImageIdx((selectedImageIdx - 1 + product.images.length) % product.images.length)}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-700 hover:bg-white hover:text-primary transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
                 >
-                  <img
-                    src={product.images[idx]}
-                    onError={(e) => { (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${product.slug}-${idx}/200/200`; }}
-                    alt={`${product.name} ${idx + 1}`}
-                    className="w-full h-full object-cover"
-                  />
+                  <ChevronLeft className="h-5 w-5" />
                 </button>
-              ))}
-            </div>
-          )}
+                <button
+                  onClick={() => setSelectedImageIdx((selectedImageIdx + 1) % product.images.length)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-700 hover:bg-white hover:text-primary transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+
+                {/* Dot indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
+                  {product.images.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setSelectedImageIdx(idx)}
+                      className={`rounded-full transition-all cursor-pointer ${
+                        selectedImageIdx === idx
+                          ? 'w-5 h-2 bg-primary'
+                          : 'w-2 h-2 bg-white/70 hover:bg-white'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
         </motion.div>
 
         {/* Details */}
@@ -91,7 +104,6 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
         >
-          <span className="text-sm font-medium text-accent uppercase tracking-wider mb-2">{product.category}</span>
           <span className="text-sm font-medium text-accent uppercase tracking-wider mb-2">{product.category}</span>
           <h1 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mb-4">{product.name}</h1>
           <p className="text-2xl font-bold text-primary mb-6">{product.priceFCFA.toLocaleString('fr-FR')} FCFA</p>
