@@ -299,10 +299,10 @@ export default function Home() {
             variants={{ show: { transition: { staggerChildren: 0.1 } } }}
           >
             {[
-              { name: 'Apaisement & Versets', seed: 'apaisement' },
-              { name: 'Défis & Spiritualité', seed: 'defis' },
-              { name: 'Coin des Enfants', seed: 'enfants' },
-              { name: "Papeterie & Dou'as", seed: 'papeterie' },
+              { name: 'Apaisement & Versets', image: '/products/bocal-1.jpg' },
+              { name: 'Défis & Spiritualité', image: '/products/defis-2.jpg' },
+              { name: 'Coin des Enfants', image: '/products/coloriage-1-cover.jpg' },
+              { name: "Papeterie & Dou'as", image: '/products/cartes-adultes-3.jpg' },
             ].map((cat, i) => (
               <motion.div
                 key={cat.name}
@@ -313,10 +313,9 @@ export default function Home() {
                   className="group relative rounded-2xl overflow-hidden aspect-square bg-slate-200 flex flex-col items-center justify-end block"
                 >
                   <img
-                    src={`https://picsum.photos/seed/${cat.seed}/400/400`}
+                    src={cat.image}
                     alt={cat.name}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
                   />
                   {/* gradient always on, stronger on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-300" />
