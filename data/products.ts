@@ -3,7 +3,7 @@ export type Product = {
   slug: string;
   name: string;
   priceFCFA: number;
-  category: 'Apaisement & Versets' | 'Défis & Spiritualité' | 'Coin des Enfants';
+  category: 'Apaisement & Versets' | 'Défis & Spiritualité' | 'Coin des Enfants' | "Papeterie & Dou'as";
   audience: 'Enfants' | 'Adultes' | 'Tous';
   description: string;
   images: string[];
@@ -79,7 +79,7 @@ export const products: Product[] = [
     slug: 'cartes-invocations-adultes',
     name: "CARTES D'INVOCATIONS POUR ADULTES",
     priceFCFA: 4500,
-    category: "Défis & Spiritualité",
+    category: "Papeterie & Dou'as",
     audience: 'Adultes',
     description: "Un set de cartes élégantes regroupant les invocations essentielles du musulman.",
     images: [
