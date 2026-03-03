@@ -13,9 +13,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 const values = [
-  { icon: <Heart className="h-8 w-8" />, title: 'Bienveillance', desc: 'Nous agissons avec sincérité et amour pour notre communauté.' },
-  { icon: <Target className="h-8 w-8" />, title: 'Éducation', desc: "Transmettre les valeurs de l'Islam de manière simple et efficace." },
-  { icon: <ShieldCheck className="h-8 w-8" />, title: 'Qualité', desc: 'Des produits durables et soignés pour une expérience optimale.' },
+  { icon: <Heart className="h-8 w-8" />, title: 'Bienveillance', desc: 'Chaque outil est pensé avec soin et amour, pour accompagner les cœurs avec douceur et sincérité.' },
+  { icon: <Target className="h-8 w-8" />, title: 'Éducation', desc: "Nous souhaitons transmettre la connaissance et les rappels d'Allah de manière accessible, pour petits et grands, afin de nourrir la foi au quotidien." },
+  { icon: <ShieldCheck className="h-8 w-8" />, title: 'Qualité', desc: "Chaque détail est travaillé avec rigueur et authenticité, pour offrir des outils durables et utiles qui inspirent le quotidien." },
 ];
 
 export default function AboutPage() {
@@ -23,9 +23,9 @@ export default function AboutPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Header */}
       <motion.div className="max-w-3xl mx-auto text-center mb-16" {...fadeUp()}>
-        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-slate-900 mb-6">Notre Histoire</h1>
+        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-slate-900 mb-6">Univers Muslim</h1>
         <p className="text-xl text-slate-600 leading-relaxed">
-          Univers Muslim est né d'une volonté simple : rendre l'apprentissage et la pratique de l'Islam accessibles, ludiques et élégants pour toute la famille.
+          Des cadeaux islamiques et outils spirituels pensés pour accompagner petits et grands au quotidien. Commandez facilement via WhatsApp et recevez votre pack à domicile.
         </p>
       </motion.div>
 
@@ -54,10 +54,13 @@ export default function AboutPage() {
         >
           <h2 className="text-3xl font-serif font-bold text-slate-900">Notre Mission</h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Nous croyons que chaque foyer musulman mérite des outils de qualité pour nourrir sa spiritualité. Que ce soit à travers des jeux éducatifs pour les plus jeunes ou des rappels quotidiens pour les adultes, notre objectif est d'accompagner chaque étape de votre cheminement.
+            Notre mission est d'accompagner chaque cœur vers un rappel constant d'Allah, à travers des outils qui allient beauté, simplicité et utilité.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Basés au Bénin, nous sélectionnons et créons des produits qui allient sens profond et esthétique moderne, pour que le rappel d'Allah soit une source de joie constante dans votre quotidien.
+            Nous souhaitons rendre l'apprentissage et la pratique de la foi accessibles, agréables et concrets. Chaque outil est pensé pour nourrir la foi, encourager la méditation et inspirer des gestes sincères au quotidien.
+          </p>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Parce que nous croyons que la spiritualité se construit jour après jour, et que chaque petit rappel peut illuminer le cœur et la maison.
           </p>
         </motion.div>
       </div>
