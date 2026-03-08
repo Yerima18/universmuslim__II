@@ -23,7 +23,7 @@ export default function Footer() {
               Commandez facilement via WhatsApp et faites-vous livrer.
             </p>
             <div className="mt-6 flex space-x-6">
-              <a href="#" className="text-slate-400 hover:text-primary">
+              <a href="https://www.instagram.com/_universmuslim?igsh=aGl3YThoOTRudTdh&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary">
                 <span className="sr-only">Instagram</span>
                 <Instagram className="h-6 w-6" />
               </a>
