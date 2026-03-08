@@ -14,15 +14,15 @@ const faqs = [
   },
   {
     question: "Quels sont les modes de livraison ?",
-    answer: "Nous livrons partout au Bénin (Cotonou, Porto-Novo, Parakou, etc.) via des services de coursiers ou des compagnies de transport. Les frais varient selon votre localité."
+    answer: "Nous livrons partout au Bénin (Cotonou, Porto-Novo, Parakou, etc.) via des services de coursiers ou des compagnies de transport. Nous livrons également en dehors du Bénin. Les frais de livraison varient selon votre localité et le mode de transport."
   },
   {
     question: "Quels sont les moyens de paiement ?",
-    answer: "Pour le moment, nous acceptons les paiements via Mobile Money (Moov Money, MTN Mobile Money) ou en espèces à la livraison (uniquement à Porto-Novo)."
+    answer: "Pour le moment, nous acceptons les paiements via Mobile Money (Moov Money, MTN Mobile Money). Les commandes sont confirmées après paiement, puis la préparation est lancée."
   },
   {
-    question: "Proposez-vous des coffrets personnalisés ?",
-    answer: "Oui ! Contactez-nous directement sur WhatsApp pour discuter de vos besoins spécifiques pour des cadeaux de mariage, naissance ou Aïd."
+    question: "Puis-je commander un pack ou un cadeau personnalisé ?",
+    answer: "Oui ! Vous pouvez nous contacter directement sur WhatsApp pour discuter de vos besoins. Nos outils peuvent être offerts pour plusieurs occasions, comme : mariage, naissance, Aïd, Ramadan, reconversion à l'islam, cadeaux spirituels pour un proche, rappels personnels pour se rapprocher d'Allah, etc…"
   }
 ];
 

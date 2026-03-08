@@ -29,41 +29,36 @@ export default function AboutPage() {
         </p>
       </motion.div>
 
+      {/* Notre histoire */}
+      <motion.div className="max-w-3xl mx-auto mb-24 space-y-6" {...fadeUp(0.1)}>
+        <h2 className="text-3xl font-serif font-bold text-slate-900">Notre histoire</h2>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          Tout a commencé avec une intention : proposer des outils simples et accessibles pour se rapprocher d'Allah au quotidien.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          Au fil du temps, cette intention s'est transformée en un projet plus grand : accompagner chaque musulman à travers des outils islamiques pensés avec soin.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          Chaque outil est conçu avec amour, sincérité et l'intention d'être un rappel bénéfique au quotidien.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          Basés au Bénin, nos outils accompagnent les musulmans partout, avec authenticité et bienveillance.
+        </p>
+      </motion.div>
+
       {/* Mission */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
-        <motion.div
-          className="rounded-3xl overflow-hidden shadow-xl"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          viewport={{ once: true, margin: '-60px' }}
-        >
-          <img
-            src="https://picsum.photos/seed/mission/800/600"
-            alt="Notre mission"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </motion.div>
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
-          viewport={{ once: true, margin: '-60px' }}
-        >
-          <h2 className="text-3xl font-serif font-bold text-slate-900">Notre Mission</h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            Notre mission est d'accompagner chaque cœur vers un rappel constant d'Allah, à travers des outils qui allient beauté, simplicité et utilité.
-          </p>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            Nous souhaitons rendre l'apprentissage et la pratique de la foi accessibles, agréables et concrets. Chaque outil est pensé pour nourrir la foi, encourager la méditation et inspirer des gestes sincères au quotidien.
-          </p>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            Parce que nous croyons que la spiritualité se construit jour après jour, et que chaque petit rappel peut illuminer le cœur et la maison.
-          </p>
-        </motion.div>
-      </div>
+      <motion.div className="max-w-3xl mx-auto mb-24 space-y-6" {...fadeUp(0.1)}>
+        <h2 className="text-3xl font-serif font-bold text-slate-900">Notre Mission</h2>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          Notre mission est d'accompagner chaque cœur vers un rappel constant d'Allah, à travers des outils qui allient beauté, simplicité et utilité.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          Nous souhaitons rendre l'apprentissage et la pratique de la foi accessibles, agréables et concrets. Chaque outil est pensé pour nourrir la foi, encourager la méditation et inspirer des gestes sincères au quotidien.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          Parce que nous croyons que la spiritualité se construit jour après jour, et que chaque petit rappel peut illuminer le cœur et la maison.
+        </p>
+      </motion.div>
 
       {/* Values */}
       <motion.div

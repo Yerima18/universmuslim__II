@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { Instagram, MessageCircle } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="font-serif text-2xl font-bold text-primary">Univers Muslim</span>
             </div>
             <p className="mt-4 text-slate-500 text-sm max-w-md">
-              Votre boutique de confiance pour des cadeaux islamiques, livres, jeux éducatifs et rappels. 
+              Pour un quotidien inspiré et plus proche de ton Créateur.
               Commandez facilement via WhatsApp et faites-vous livrer.
             </p>
             <div className="mt-6 flex space-x-6">
@@ -27,11 +27,7 @@ export default function Footer() {
                 <span className="sr-only">Instagram</span>
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-primary">
-                <span className="sr-only">Facebook</span>
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href={`https://wa.me/${siteConfig.whatsappNumber}`} className="text-slate-400 hover:text-primary">
+<a href={`https://wa.me/${siteConfig.whatsappNumber}`} className="text-slate-400 hover:text-primary">
                 <span className="sr-only">WhatsApp</span>
                 <MessageCircle className="h-6 w-6" />
               </a>
@@ -52,7 +48,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-slate-900 tracking-wider uppercase">Contact</h3>
             <ul className="mt-4 space-y-4">
               <li className="text-base text-slate-500">WhatsApp: {siteConfig.whatsappNumberDisplay}</li>
-              <li className="text-base text-slate-500">Email: contact@universmuslim.com</li>
+              <li className="text-base text-slate-500 whitespace-nowrap">Email: contactuniversmuslim@gmail.com</li>
               <li className="text-base text-slate-500">Porto-Novo, Bénin</li>
             </ul>
           </div>
