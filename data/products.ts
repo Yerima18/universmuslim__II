@@ -152,4 +152,21 @@ export const products: Product[] = [
       '/products/coloriage-pack-3.jpg',
     ]
   },
+  {
+    id: '9',
+    slug: 'fiche-rappel-tasbih',
+    name: "FICHES DE RAPPEL + CARTE DHIKR + ZIKROMÈTRE",
+    priceFCFA: 2000,
+    category: "Papeterie & Dou'as",
+    audience: 'Tous',
+    description: "Un ensemble complet pour nourrir votre rappel d'Allah au quotidien : fiche islamique \"Le Dhikr — une lumière pour le cœur\", fiches sur les 5 Piliers, les 25 Prophètes et les ablutions, accompagnées d'un finger counter pour compter vos invocations.",
+    images: [
+      '/products/fiche-rappel-1.jpg',
+      '/products/fiche-rappel-2.jpg',
+      '/products/fiche-rappel-3.jpg',
+      '/products/fiche-rappel-4.jpg',
+      '/products/fiche-rappel-5.jpg',
+      '/products/fiche-rappel-6.jpg',
+    ]
+  },
 ];
