@@ -4,7 +4,7 @@ import { useState, use } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Minus, Plus, ShoppingCart, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-import { products } from '@/data/products';
+import { products, formatPrice } from '@/data/products';
 import { useCart } from '@/components/CartProvider';
 import { siteConfig } from '@/config/site';
 import { motion, AnimatePresence } from 'motion/react';
@@ -106,7 +106,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
         >
           <span className="text-sm font-medium text-accent uppercase tracking-wider mb-2">{product.category}</span>
           <h1 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mb-4">{product.name}</h1>
-          <p className="text-2xl font-bold text-primary mb-6">{product.priceFCFA.toLocaleString('fr-FR')} FCFA</p>
+          <p className="text-2xl font-bold text-primary mb-6">{formatPrice(product)}</p>
           
           <div className="prose prose-slate mb-8">
             <p>{product.description}</p>
@@ -193,7 +193,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 </div>
                 <div className="p-5 flex flex-col flex-grow">
                   <h3 className="text-sm font-medium text-slate-900 flex-grow line-clamp-2 group-hover:text-primary transition-colors">{p.name}</h3>
-                  <p className="mt-2 text-lg font-bold text-primary">{p.priceFCFA.toLocaleString('fr-FR')} FCFA</p>
+                  <p className="mt-2 text-lg font-bold text-primary">{formatPrice(p)}</p>
                 </div>
               </Link>
               </motion.div>

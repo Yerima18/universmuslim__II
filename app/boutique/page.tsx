@@ -3,7 +3,7 @@
 import { useState, useMemo, Suspense } from 'react';
 import Link from 'next/link';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
-import { products } from '@/data/products';
+import { products, formatPrice } from '@/data/products';
 import { useCart } from '@/components/CartProvider';
 import { motion, AnimatePresence } from 'motion/react';
 import { useSearchParams } from 'next/navigation';
@@ -263,7 +263,7 @@ function ShopContent() {
                           <h3 className="text-sm font-medium text-slate-900 flex-grow line-clamp-2 hover:text-primary transition-colors">{product.name}</h3>
                         </Link>
                         <div className="mt-4">
-                          <p className="text-lg font-bold text-primary">{product.priceFCFA.toLocaleString('fr-FR')} FCFA</p>
+                          <p className="text-lg font-bold text-primary">{formatPrice(product)}</p>
                         </div>
                         <div className="mt-3 grid grid-cols-2 gap-2">
                           <Link href={`/produit/${product.slug}`} className="text-center px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors">

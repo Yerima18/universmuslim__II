@@ -3,11 +3,17 @@ export type Product = {
   slug: string;
   name: string;
   priceFCFA: number;
+  pricePrefix?: string;
   category: 'Apaisement & Versets' | 'Défis & Spiritualité' | 'Coin des Enfants' | "Papeterie & Dou'as";
   audience: 'Enfants' | 'Adultes' | 'Tous';
   description: string;
   images: string[];
 };
+
+export function formatPrice(product: Pick<Product, 'priceFCFA' | 'pricePrefix'>): string {
+  const price = `${product.priceFCFA.toLocaleString('fr-FR')} FCFA`;
+  return product.pricePrefix ? `${product.pricePrefix} ${price}` : price;
+}
 
 export const products: Product[] = [
   {
@@ -31,7 +37,7 @@ export const products: Product[] = [
   {
     id: '2',
     slug: 'boite-defis-tasbih',
-    name: "BOÎTE À DÉFIS + TASBIH (30 CARTES - 30 DÉFIS)",
+    name: "BOÎTE À DÉFIS(30 CARTES - 30 DÉFIS)",
     priceFCFA: 5000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
@@ -93,7 +99,7 @@ export const products: Product[] = [
     id: '6',
     slug: 'coloriage-prophetes-1',
     name: "CAHIER DE COLORIAGE POUR ENFANTS - HISTOIRES DES PROPHÈTES (TOME 1)",
-    priceFCFA: 6000,
+    priceFCFA: 6500,
     category: 'Coin des Enfants',
     audience: 'Enfants',
     description: "Découvrez l'histoire des Prophètes à travers des dessins adaptés aux enfants. Tome 1.",
@@ -116,7 +122,7 @@ export const products: Product[] = [
     id: '7',
     slug: 'coloriage-prophetes-2',
     name: "CAHIER DE COLORIAGE POUR ENFANTS - HISTOIRES DES PROPHÈTES (TOME 2)",
-    priceFCFA: 6000,
+    priceFCFA: 6500,
     category: 'Coin des Enfants',
     audience: 'Enfants',
     description: "La suite des histoires des Prophètes en coloriage. Tome 2.",
@@ -156,7 +162,8 @@ export const products: Product[] = [
     id: '9',
     slug: 'fiche-rappel-tasbih',
     name: "FICHES DE RAPPEL + CARTE DHIKR + ZIKROMÈTRE",
-    priceFCFA: 2000,
+    priceFCFA: 1500,
+    pricePrefix: "À partir de",
     category: "Papeterie & Dou'as",
     audience: 'Tous',
     description: "Un ensemble complet pour nourrir votre rappel d'Allah au quotidien : fiche islamique \"Le Dhikr — une lumière pour le cœur\", fiches sur les 5 Piliers, les 25 Prophètes et les ablutions, accompagnées d'un finger counter pour compter vos invocations.",

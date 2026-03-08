@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Truck, ShieldCheck, MessageCircle, Package } from 'lucide-react';
-import { products } from '@/data/products';
+import { products, formatPrice } from '@/data/products';
 import { siteConfig } from '@/config/site';
 import { motion } from 'motion/react';
 
@@ -264,7 +264,7 @@ export default function Home() {
                   <div className="p-5">
                     <h3 className="text-sm font-semibold text-slate-800 line-clamp-2 mb-3 group-hover:text-primary transition-colors">{product.name}</h3>
                     <div className="flex items-center justify-between">
-                      <p className="text-lg font-bold text-primary">{product.priceFCFA.toLocaleString('fr-FR')} <span className="text-xs font-normal text-slate-400">FCFA</span></p>
+                      <p className="text-lg font-bold text-primary">{formatPrice(product)}</p>
                       <span className="text-xs font-semibold text-primary border border-primary/30 rounded-full px-3 py-1 group-hover:bg-primary group-hover:text-white transition-all">Voir</span>
                     </div>
                   </div>
