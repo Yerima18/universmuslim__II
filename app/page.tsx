@@ -23,7 +23,7 @@ const fadeUpInView = (delay = 0) => ({
 
 /* ── Ornamental divider ─────────────────────────────── */
 function Ornament({ light = false }: { light?: boolean }) {
-  const c = light ? '#C9A84C' : '#A07830';
+  const c = light ? '#C9A84C' : '#C9A84C';
   return (
     <div className="flex items-center justify-center gap-3 my-2">
       <div className="h-px w-12" style={{ backgroundColor: c, opacity: 0.5 }} />
@@ -140,7 +140,7 @@ export default function Home() {
                 <Link
                   href="/boutique"
                   className="inline-flex justify-center items-center px-8 py-4 rounded-xl text-sm font-bold tracking-wide transition-all shadow-lg"
-                  style={{ backgroundColor: '#C4922A', color: '#fff' }}
+                  style={{ backgroundColor: '#00ADEF', color: '#fff' }}
                 >
                   Découvrir la collection
                 </Link>
