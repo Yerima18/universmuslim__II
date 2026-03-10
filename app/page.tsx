@@ -23,7 +23,7 @@ const fadeUpInView = (delay = 0) => ({
 
 /* ── Ornamental divider ─────────────────────────────── */
 function Ornament({ light = false }: { light?: boolean }) {
-  const c = light ? '#D2B48C' : '#C4922A';
+  const c = light ? '#C9A84C' : '#A07830';
   return (
     <div className="flex items-center justify-center gap-3 my-2">
       <div className="h-px w-12" style={{ backgroundColor: c, opacity: 0.5 }} />
@@ -41,7 +41,7 @@ function IslamicMandala() {
   const star = '200,40 225,139 313,87 261,175 360,200 261,225 313,313 225,261 200,360 175,261 87,313 139,225 40,200 139,175 87,87 175,139';
   return (
     <svg viewBox="0 0 400 400" className="w-72 h-72 sm:w-96 sm:h-96 opacity-25" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke="#D2B48C">
+      <g fill="none" stroke="#C9A84C">
         <circle cx="200" cy="200" r="188" strokeWidth="0.5" opacity="0.4" />
         <circle cx="200" cy="200" r="170" strokeWidth="0.8" opacity="0.6" />
         {/* 16 radial spokes */}
@@ -78,7 +78,7 @@ export default function Home() {
     <div className="flex flex-col">
 
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative text-white overflow-hidden" style={{ backgroundColor: '#3B1F0E' }}>
+      <section className="relative text-white overflow-hidden" style={{ backgroundColor: '#003D5C' }}>
         {/* tiled pattern */}
         <div className="absolute inset-0 opacity-[0.08]" aria-hidden="true">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +105,7 @@ export default function Home() {
             >
               <motion.span
                 className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4"
-                style={{ color: '#D2B48C' }}
+                style={{ color: '#C9A84C' }}
                 variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } } }}
               >
                 Boutique islamique — Porto-Novo, Bénin
@@ -213,7 +213,7 @@ export default function Home() {
                 className="flex items-start gap-5 bg-white rounded-2xl p-7 shadow-sm border border-slate-100"
                 variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } } }}
               >
-                <div className="h-12 w-12 rounded-xl flex-shrink-0 flex items-center justify-center text-white" style={{ backgroundColor: '#4F6F52' }}>
+                <div className="h-12 w-12 rounded-xl flex-shrink-0 flex items-center justify-center text-white" style={{ backgroundColor: '#00ADEF' }}>
                   {item.icon}
                 </div>
                 <div>
@@ -257,7 +257,7 @@ export default function Home() {
                       className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-full text-white/90" style={{ backgroundColor: 'rgba(79,111,82,0.85)' }}>
+                    <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-full text-white/90" style={{ backgroundColor: 'rgba(0,173,239,0.85)' }}>
                       {product.category}
                     </span>
                   </div>
@@ -332,10 +332,10 @@ export default function Home() {
       </section>
 
       {/* ── WHATSAPP CTA BANNER ──────────────────────────── */}
-      <section className="py-16 sm:py-20" style={{ backgroundColor: '#3B1F0E' }}>
+      <section className="py-16 sm:py-20" style={{ backgroundColor: '#003D5C' }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div {...fadeUpInView()}>
-            <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: '#D2B48C' }}>Commander facilement</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: '#C9A84C' }}>Commander facilement</span>
             <Ornament light />
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mt-3 mb-4">
               Besoin d'aide pour choisir ?
