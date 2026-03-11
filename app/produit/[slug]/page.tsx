@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use } from 'react';
+import { useState, use, useRef } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Minus, Plus, ShoppingCart, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -15,6 +15,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
   const { addItem } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIdx, setSelectedImageIdx] = useState(0);
+  const touchStartX = useRef<number | null>(null);
 
   if (!product) {
     notFound();
@@ -46,7 +47,22 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Main image with arrows */}
-          <div className="relative aspect-square bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 group">
+          <div
+            className="relative aspect-square bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 group"
+            onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+            onTouchEnd={(e) => {
+              if (touchStartX.current === null) return;
+              const diff = touchStartX.current - e.changedTouches[0].clientX;
+              if (Math.abs(diff) > 40) {
+                if (diff > 0) {
+                  setSelectedImageIdx((selectedImageIdx + 1) % product.images.length);
+                } else {
+                  setSelectedImageIdx((selectedImageIdx - 1 + product.images.length) % product.images.length);
+                }
+              }
+              touchStartX.current = null;
+            }}
+          >
             <AnimatePresence mode="wait">
               <motion.img
                 key={selectedImageIdx}
@@ -66,19 +82,19 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               <>
                 <button
                   onClick={() => setSelectedImageIdx((selectedImageIdx - 1 + product.images.length) % product.images.length)}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-700 hover:bg-white hover:text-primary transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-700 hover:bg-white hover:text-primary transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => setSelectedImageIdx((selectedImageIdx + 1) % product.images.length)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-700 hover:bg-white hover:text-primary transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-700 hover:bg-white hover:text-primary transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
                 >
                   <ChevronRight className="h-5 w-5" />
                 </button>
 
                 {/* Dot indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                   {product.images.map((_, idx) => (
                     <button
                       key={idx}
