@@ -62,6 +62,7 @@ export const products: Product[] = [
       '/products/99noms-1.jpg',
       '/products/99noms-2.jpg',
       '/products/99noms-3.jpg',
+      '/products/99noms-4.jpg',
     ]
   },
   {
