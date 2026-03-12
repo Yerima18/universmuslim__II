@@ -25,7 +25,7 @@ export default function AboutPage() {
       <motion.div className="max-w-3xl mx-auto text-center mb-16" {...fadeUp()}>
         <h1 className="text-4xl sm:text-5xl font-serif font-bold text-slate-900 mb-6">Univers Muslim</h1>
         <p className="text-xl text-slate-600 leading-relaxed">
-          Des cadeaux islamiques et outils spirituels pensés pour accompagner petits et grands au quotidien. Commandez facilement via WhatsApp et recevez votre pack à domicile.
+          Des outils islamiques et spirituels pensés pour accompagner petits et grands au quotidien. Commandez facilement via WhatsApp et recevez votre pack à domicile.
         </p>
       </motion.div>
 

@@ -341,7 +341,7 @@ export default function Home() {
               Besoin d'aide pour choisir ?
             </h2>
             <p className="text-white/70 mb-8 leading-relaxed">
-              Contactez-nous directement sur WhatsApp. Nous vous guidons vers le cadeau parfait.
+              Contactez-nous directement sur WhatsApp. Nous vous guidons vers l'outil parfait.
             </p>
             <motion.a
               href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Salam, j'ai besoin d'aide pour choisir un produit.")}`}
