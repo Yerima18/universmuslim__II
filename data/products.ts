@@ -59,10 +59,10 @@ export const products: Product[] = [
     audience: 'Tous',
     description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret premium. Inclus une notice de référence pour l'étude : numérotation, écriture arabe et phonétique. Idéal pour offrir.",
     images: [
+      '/products/99noms-4.jpg',
       '/products/99noms-1.jpg',
       '/products/99noms-2.jpg',
       '/products/99noms-3.jpg',
-      '/products/99noms-4.jpg',
     ]
   },
   {
