@@ -57,7 +57,7 @@ export const products: Product[] = [
     priceFCFA: 22000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Apprenez et méditez sur les 99 Noms d'Allah avec ce coffret premium. Idéal pour offrir.",
+    description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret premium. Inclus une notice de référence pour l'étude : numérotation, écriture arabe et phonétique. Idéal pour offrir.",
     images: [
       '/products/99noms-1.jpg',
       '/products/99noms-2.jpg',
