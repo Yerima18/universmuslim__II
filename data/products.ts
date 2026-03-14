@@ -23,7 +23,7 @@ export const products: Product[] = [
     priceFCFA: 5000,
     category: 'Apaisement & Versets',
     audience: 'Tous',
-    description: "Un magnifique bocal contenant des versets du Coran pour apaiser le cœur et se rappeler d'Allah au quotidien.",
+    description: "Un magnifique bocal contenant des versets du Quran pour apaiser le cœur et se rappeler d'Allah au quotidien.",
     images: [
       '/products/bocal-1.jpg',
       '/products/bocal-2.jpg',
@@ -41,7 +41,7 @@ export const products: Product[] = [
     priceFCFA: 5000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Relevez un défi spirituel chaque jour pendant 30 jours. Inclus un tasbih pour vos invocations.",
+    description: "Relevez un défi spirituel chaque jour pendant 30 jours. Inclus un tasbih au choix pour vos invocations.",
     images: [
       '/products/defis-1.jpg',
       '/products/defis-2.jpg',
