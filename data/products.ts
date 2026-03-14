@@ -5,6 +5,7 @@ export type Product = {
   priceFCFA: number;
   pricePrefix?: string;
   category: 'Apaisement & Versets' | 'Défis & Spiritualité' | 'Coin des Enfants' | "Papeterie & Dou'as" | 'Carnets islamiques';
+  extraCategories?: string[];
   audience: 'Enfants' | 'Adultes' | 'Tous';
   description: string;
   images: string[];
@@ -164,8 +165,8 @@ export const products: Product[] = [
     slug: 'carnets-islamiques',
     name: "CARNETS ISLAMIQUES",
     priceFCFA: 5000,
-    pricePrefix: "À partir de",
     category: 'Carnets islamiques',
+    extraCategories: ["Défis & Spiritualité"],
     audience: 'Tous',
     description: "Des carnets pensés pour accompagner ta spiritualité au quotidien : repentir, réflexion et invocation pour renforcer ta relation avec Allah. Disponibles en deux thèmes : \"Revenir à Allah — Le Repentir sincère (At-Tawbah)\" et \"Confier ses choix à Allah — La Prière de consultation (Salat al-Istikhara)\".",
     images: [
