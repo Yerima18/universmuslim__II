@@ -18,7 +18,7 @@ export default function CartPage() {
   const handleWhatsAppOrder = () => {
     if (items.length === 0) return;
 
-    let message = "Salam, je souhaite commander :\n";
+    let message = "As salam 'aleykoum wa raHmatullah Wa barakatu, je souhaite passer commande :\n";
     items.forEach(item => {
       message += `- ${item.name} x${item.quantity} = ${(item.priceFCFA * item.quantity).toLocaleString('fr-FR')} FCFA\n`;
     });

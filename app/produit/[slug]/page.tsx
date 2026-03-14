@@ -26,7 +26,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
     .slice(0, 4);
 
   const handleWhatsAppOrder = () => {
-    const text = `Salam, je souhaite commander :\n- ${product.name} x${quantity} = ${(product.priceFCFA * quantity).toLocaleString('fr-FR')} FCFA\n\nTotal : ${(product.priceFCFA * quantity).toLocaleString('fr-FR')} FCFA\n\nNom: \nVille/Quartier: \nNote: \n\nBarakAllahu fik.`;
+    const text = `As salam 'aleykoum wa raHmatullah Wa barakatu, je souhaite passer commande :\n- ${product.name} x${quantity} = ${(product.priceFCFA * quantity).toLocaleString('fr-FR')} FCFA\n\nTotal : ${(product.priceFCFA * quantity).toLocaleString('fr-FR')} FCFA\n\nNom: \nVille/Quartier: \nNote: \n\nBarakAllahu fik.`;
     window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
   };
 

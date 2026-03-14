@@ -6,7 +6,7 @@ import { siteConfig } from '@/config/site';
 export default function FloatingWhatsApp() {
   return (
     <a
-      href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Salam, j'ai une question sur votre boutique.")}`}
+      href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("As salam 'aleykoum wa raHmatullah Wa barakatu, j'ai une question sur votre boutique.")}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contacter sur WhatsApp"

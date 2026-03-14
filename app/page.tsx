@@ -292,7 +292,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-60px' }}
@@ -303,6 +303,7 @@ export default function Home() {
               { name: 'Défis & Spiritualité', image: '/products/defis-2.jpg' },
               { name: 'Coin des Enfants', image: '/products/coloriage-1-cover.jpg' },
               { name: "Papeterie & Dou'as", image: '/products/cartes-adultes-3.jpg' },
+              { name: 'Carnets islamiques', image: '/products/carnets-1.jpg' },
             ].map((cat, i) => (
               <motion.div
                 key={cat.name}
@@ -316,6 +317,7 @@ export default function Home() {
                     src={cat.image}
                     alt={cat.name}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    onError={(e) => { (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/' + cat.name + '/400/400'; }}
                   />
                   {/* gradient always on, stronger on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-300" />
@@ -344,7 +346,7 @@ export default function Home() {
               Contactez-nous directement sur WhatsApp. Nous vous guidons vers l'outil parfait.
             </p>
             <motion.a
-              href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Salam, j'ai besoin d'aide pour choisir un produit.")}`}
+              href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("As salam 'aleykoum wa raHmatullah Wa barakatu, j'ai besoin d'aide pour choisir un produit.")}`}
               className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-white font-bold text-sm shadow-lg transition-all"
               style={{ backgroundColor: '#25D366' }}
               whileHover={{ scale: 1.04, backgroundColor: '#128C7E' }}
