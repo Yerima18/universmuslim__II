@@ -19,7 +19,7 @@ function ShopContent() {
   const [sortBy, setSortBy] = useState('nouveautes');
   const [filtersOpen, setFiltersOpen] = useState(false);
 
-  const categories = ['Toutes', ...Array.from(new Set(products.flatMap(p => [p.category, ...(p.extraCategories ?? [])])))];
+  const categories = ['Toutes', ...Array.from(new Set(products.map(p => p.category)))];
   const audiences = ['Tous', 'Enfants', 'Adultes'];
 
   const filteredProducts = useMemo(() => {
@@ -30,7 +30,7 @@ function ShopContent() {
     }
 
     if (selectedCategory !== 'Toutes') {
-      result = result.filter(p => p.category === selectedCategory || (p.extraCategories ?? []).includes(selectedCategory));
+      result = result.filter(p => p.category === selectedCategory);
     }
 
     if (selectedAudience !== 'Tous') {

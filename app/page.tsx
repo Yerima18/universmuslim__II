@@ -292,7 +292,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-60px' }}
@@ -303,7 +303,6 @@ export default function Home() {
               { name: 'Défis & Spiritualité', image: '/products/defis-2.jpg' },
               { name: 'Coin des Enfants', image: '/products/coloriage-1-cover.jpg' },
               { name: "Papeterie & Dou'as", image: '/products/cartes-adultes-3.jpg' },
-              { name: 'Carnets islamiques', image: '/products/carnets-1.jpg' },
             ].map((cat, i) => (
               <motion.div
                 key={cat.name}
