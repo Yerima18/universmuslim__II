@@ -29,7 +29,7 @@ export default function CartPage() {
     if (customerInfo.city) message += `Ville/Quartier: ${customerInfo.city}\n`;
     if (customerInfo.note) message += `Note: ${customerInfo.note}\n`;
 
-    message += "\nBarakAllahu fik.";
+    message += "\nBarakallahu fik.";
 
     window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
