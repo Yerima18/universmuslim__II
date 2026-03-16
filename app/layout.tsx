@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
-  title: 'Univers Muslim | Outils islamiques, Éducation & Rappels',
-  description: 'Boutique en ligne d\'outils islamiques, livres, jeux éducatifs et rappels pour toute la famille.',
+  title: 'Univers Muslim | Outils islamiques, supports éducatifs et rappels bénéfiques',
+  description: 'Outils islamiques, supports éducatifs et rappels bénéfiques.',
 };
 
 export default function RootLayout({
