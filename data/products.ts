@@ -59,7 +59,7 @@ export const products: Product[] = [
     priceFCFA: 22000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret premium. Inclus une notice de référence pour l'étude : numérotation, écriture arabe et phonétique.",
+    description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret. Chaque Nom est accompagné de son écriture en arabe, de sa phonétique, de sa signification ainsi que d'une invocation associée. Une notice de référence est également incluse pour faciliter l'étude.",
     images: [
       '/products/99noms-4.jpg',
       '/products/99noms-1.jpg',
@@ -169,7 +169,7 @@ export const products: Product[] = [
     priceSuffix: "sur commande",
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Des carnets pensés pour accompagner ta spiritualité au quotidien : repentir, réflexion et invocation pour renforcer ta relation avec Allah. Disponibles en deux thèmes : \"Revenir à Allah — Le Repentir sincère (At-Tawbah)\" et \"Confier ses choix à Allah — La Prière de consultation (Salat al-Istikhara)\". Sur commande.",
+    description: "Des carnets pensés pour accompagner ta spiritualité au quotidien : repentir, réflexion et invocation pour renforcer ta relation avec Allah. Disponibles en deux thèmes : \"Revenir à Allah — Le Repentir sincère (At-Tawbah)\" et \"Confier ses choix à Allah — La Prière de consultation (Salat al-Istikhara)\".",
     images: [
       '/products/carnets-1.jpg',
       '/products/carnets-2.jpg',
