@@ -53,7 +53,13 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-slate-200 pt-8">
+        <div className="mt-12 border-t border-slate-200 pt-8 space-y-6">
+          <div className="bg-[#F0FBFE] border border-[#00ADEF]/20 rounded-xl px-6 py-5 text-sm text-slate-600 space-y-2">
+            <p className="font-semibold text-[#003D5C] text-base">📦 Informations importantes sur les commandes</p>
+            <p>Tous nos outils proposés sont disponibles <strong>uniquement sur commande</strong>.</p>
+            <p>Le paiement se fait généralement <strong>avant le traitement</strong> de la commande.</p>
+            <p>Les délais de préparation varient entre <strong>24h et 72h</strong>, selon l&apos;outil.</p>
+          </div>
           <p className="text-base text-slate-400 xl:text-center">
             &copy; {new Date().getFullYear()} Univers Muslim. Tous droits réservés.
           </p>

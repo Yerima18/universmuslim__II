@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { CartProvider } from '@/components/CartProvider';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import AnnouncementBar from '@/components/AnnouncementBar';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${inter.variable} ${playfair.variable} font-sans bg-bg text-slate-800 min-h-screen flex flex-col`}>
         <CartProvider>
+          <AnnouncementBar />
           <Navbar />
           <main className="grow">
             {children}

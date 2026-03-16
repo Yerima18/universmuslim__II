@@ -41,7 +41,7 @@ export const products: Product[] = [
     priceFCFA: 5000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Relevez un défi spirituel chaque jour pendant 30 jours. Inclus un tasbih au choix pour vos invocations.",
+    description: "Relevez un défi spirituel chaque jour pendant 30 jours et bien au delà. Inclus un tasbih au choix pour vos invocations.",
     images: [
       '/products/defis-1.jpg',
       '/products/defis-2.jpg',
@@ -72,7 +72,7 @@ export const products: Product[] = [
     priceFCFA: 4000,
     category: 'Coin des Enfants',
     audience: 'Enfants',
-    description: "Des cartes colorées et ludiques pour apprendre les invocations quotidiennes aux enfants.",
+    description: "Un support éducatif conçu pour aider les enfants à apprendre et mémoriser des invocations du quotidien.",
     images: [
       '/products/cartes-enfants-1.jpg',
       '/products/cartes-enfants-2.jpg',
@@ -88,7 +88,7 @@ export const products: Product[] = [
     priceFCFA: 4500,
     category: "Papeterie & Dou'as",
     audience: 'Adultes',
-    description: "Un set de cartes élégantes regroupant les invocations essentielles du musulman.",
+    description: "Des cartes regroupant des invocations à réciter dans différentes situations du quotidien, pour garder le rappel d'Allah présent dans sa journée.",
     images: [
       '/products/cartes-adultes-1.jpg',
       '/products/cartes-adultes-2.jpg',
@@ -103,7 +103,7 @@ export const products: Product[] = [
     priceFCFA: 6500,
     category: 'Coin des Enfants',
     audience: 'Enfants',
-    description: "Découvrez l'histoire des Prophètes à travers des dessins adaptés aux enfants. Tome 1.",
+    description: "Un cahier de coloriage éducatif qui permet de découvrir les histoires de 5 prophètes : Adam, Idrīss, Nūḥ, Hūd et Ṣāliḥ 'alayhima salam. À travers les pages, les enfants apprennent leurs histoires tout en coloriant et découvrent les leçons importantes qu'elles contiennent. Un support simple pour apprendre tout en s'amusant.",
     images: [
       '/products/coloriage-1-cover.jpg',
       '/products/coloriage-1b.jpg',
@@ -126,7 +126,7 @@ export const products: Product[] = [
     priceFCFA: 6500,
     category: 'Coin des Enfants',
     audience: 'Enfants',
-    description: "La suite des histoires des Prophètes en coloriage. Tome 2.",
+    description: "Un cahier de coloriage éducatif qui permet de découvrir les histoires de 5 prophètes : Ibrāhim, Lūṭ, Isma'īl, Ishāq et Ya'qūb 'alayhima salam. À travers les pages, les enfants apprennent leurs histoires tout en coloriant et découvrent les leçons importantes qu'elles contiennent. Un support simple pour apprendre tout en s'amusant.",
     images: [
       '/products/coloriage-2-cover.jpg',
       '/products/coloriage-2b.jpg',
@@ -166,7 +166,7 @@ export const products: Product[] = [
     priceFCFA: 5000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Des carnets pensés pour accompagner ta spiritualité au quotidien : repentir, réflexion et invocation pour renforcer ta relation avec Allah. Disponibles en deux thèmes : \"Revenir à Allah — Le Repentir sincère (At-Tawbah)\" et \"Confier ses choix à Allah — La Prière de consultation (Salat al-Istikhara)\".",
+    description: "Des carnets pensés pour accompagner ta spiritualité au quotidien : repentir, réflexion et invocation pour renforcer ta relation avec Allah. Disponibles en deux thèmes : \"Revenir à Allah — Le Repentir sincère (At-Tawbah)\" et \"Confier ses choix à Allah — La Prière de consultation (Salat al-Istikhara)\". Sur commande.",
     images: [
       '/products/carnets-1.jpg',
       '/products/carnets-2.jpg',
