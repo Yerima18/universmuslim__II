@@ -12,7 +12,7 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 
 export const metadata: Metadata = {
   title: 'Univers Muslim | Outils islamiques, supports éducatifs et rappels bénéfiques',
-  description: 'Outils islamiques, supports éducatifs et rappels bénéfiques.',
+  description: 'Pour un quotidien inspiré et plus proche de ton Créateur.',
 };
 
 export default function RootLayout({
