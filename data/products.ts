@@ -59,7 +59,7 @@ export const products: Product[] = [
     priceFCFA: 22000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret. Chaque Nom est accompagné de son écriture en arabe, de sa phonétique, de sa signification ainsi que d'une invocation associée. Une notice de référence est également incluse pour faciliter l'étude.",
+    description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret. Chaque Nom est présenté avec son écriture en arabe, sa phonétique, sa signification, une explication ainsi qu'une invocation associée. Une notice de référence est également incluse pour faciliter l'étude.",
     images: [
       '/products/99noms-4.jpg',
       '/products/99noms-1.jpg',
