@@ -4,15 +4,17 @@ export type Product = {
   name: string;
   priceFCFA: number;
   pricePrefix?: string;
+  priceSuffix?: string;
   category: 'Apaisement & Versets' | 'Défis & Spiritualité' | 'Coin des Enfants' | "Papeterie & Dou'as";
   audience: 'Enfants' | 'Adultes' | 'Tous';
   description: string;
   images: string[];
 };
 
-export function formatPrice(product: Pick<Product, 'priceFCFA' | 'pricePrefix'>): string {
+export function formatPrice(product: Pick<Product, 'priceFCFA' | 'pricePrefix' | 'priceSuffix'>): string {
   const price = `${product.priceFCFA.toLocaleString('fr-FR')} FCFA`;
-  return product.pricePrefix ? `${product.pricePrefix} ${price}` : price;
+  const withPrefix = product.pricePrefix ? `${product.pricePrefix} ${price}` : price;
+  return product.priceSuffix ? `${withPrefix} ${product.priceSuffix}` : withPrefix;
 }
 
 export const products: Product[] = [
@@ -57,7 +59,7 @@ export const products: Product[] = [
     priceFCFA: 22000,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret premium. Inclus une notice de référence pour l'étude : numérotation, écriture arabe et phonétique. Idéal pour offrir.",
+    description: "Apprenez et méditez sur les 99 Noms d'Allah (Asmā'ul Husnā) avec ce coffret premium. Inclus une notice de référence pour l'étude : numérotation, écriture arabe et phonétique.",
     images: [
       '/products/99noms-4.jpg',
       '/products/99noms-1.jpg',
@@ -164,6 +166,7 @@ export const products: Product[] = [
     slug: 'carnets-islamiques',
     name: "CARNETS ISLAMIQUES",
     priceFCFA: 5000,
+    priceSuffix: "sur commande",
     category: 'Défis & Spiritualité',
     audience: 'Tous',
     description: "Des carnets pensés pour accompagner ta spiritualité au quotidien : repentir, réflexion et invocation pour renforcer ta relation avec Allah. Disponibles en deux thèmes : \"Revenir à Allah — Le Repentir sincère (At-Tawbah)\" et \"Confier ses choix à Allah — La Prière de consultation (Salat al-Istikhara)\". Sur commande.",

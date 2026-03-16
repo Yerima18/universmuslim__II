@@ -14,5 +14,5 @@ export default function FloatingWhatsApp() {
     >
       <MessageCircle className="h-7 w-7" />
     </a>
-  );
+  ); 
 }
