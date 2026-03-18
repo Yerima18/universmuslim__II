@@ -165,7 +165,7 @@ export const products: Product[] = [
     id: '10',
     slug: 'carnets-islamiques',
     name: "CARNETS ISLAMIQUES",
-    priceFCFA: 5000,
+    priceFCFA: 15000,
     priceSuffix: "sur commande",
     category: 'Défis & Spiritualité',
     audience: 'Tous',
