@@ -40,7 +40,7 @@ export const products: Product[] = [
     id: '2',
     slug: 'boite-defis-tasbih',
     name: "BOÎTE À DÉFIS(30 CARTES - 30 DÉFIS)",
-    priceFCFA: 5000,
+    priceFCFA: 4500,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
     description: "Relevez un défi spirituel chaque jour pendant 30 jours et bien au delà. Inclus un tasbih au choix pour vos invocations.",
