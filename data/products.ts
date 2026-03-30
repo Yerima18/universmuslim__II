@@ -43,7 +43,7 @@ export const products: Product[] = [
     priceFCFA: 4500,
     category: 'Défis & Spiritualité',
     audience: 'Tous',
-    description: "Relevez un défi spirituel chaque jour pendant 30 jours et bien au delà. Inclus un tasbih au choix pour vos invocations.",
+    description: "Relevez un défi spirituel chaque jour pendant 30 jours et bien au delà. Inclus un tasbih (payant) au choix pour vos dhikrs.",
     images: [
       '/products/defis-1.jpg',
       '/products/defis-2.jpg',
