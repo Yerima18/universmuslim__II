@@ -5,6 +5,7 @@ import { Truck, ShieldCheck, MessageCircle, Package } from 'lucide-react';
 import { products, formatPrice } from '@/data/products';
 import { siteConfig } from '@/config/site';
 import { motion } from 'motion/react';
+import ReviewsSection from '@/components/ReviewsSection';
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -331,6 +332,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* ── REVIEWS ──────────────────────────────────────── */}
+      <ReviewsSection />
 
       {/* ── WHATSAPP CTA BANNER ──────────────────────────── */}
       <section className="py-16 sm:py-20" style={{ backgroundColor: '#003D5C' }}>
